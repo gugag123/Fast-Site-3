@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- TELA 2: BOAS-VINDAS COM IMAGEM EM TELA CHEIA - abre quando o login está certo -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navalha Negra | Bem-vindo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;700&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="oculto">
+<div class="tela-hero">
+    <header class="topo-transparente">
+        <a class="marca" href="/home.html">
+            <div class="emblema">NN</div>
+            <div>
+                <div class="marca-nome">NAVALHA <span>NEGRA</span></div>
+                <div class="aluno">Aluno: <strong>Gustavo D./Arthur M.</strong></div>
+            </div>
+        </a>
+        <nav>
+            <a href="/home.html" class="ativo">Início</a>
+            <a href="/cadastros.html" data-so-admin hidden>Cadastros salvos</a>
+            <button id="btnSair" class="btn btn-contorno btn-pequeno">Sair</button>
+        </nav>
+    </header>
+
+    <main class="hero-centro">
+        <div class="selo">
+            <div class="pequeno">Barbearia · desde 2026</div>
+            <h1>Bem-vindo,<br><span data-nome-logado></span></h1>
+            <div class="divisor"></div>
+
+            <!-- Texto para o ADMINISTRADOR -->
+            <div data-so-admin hidden>
+                <p>Você está no painel do administrador (<span data-email-logado></span>).<br>
+                   Veja as fichas dos clientes cadastrados.</p>
+                <a href="/cadastros.html" class="btn">Ver cadastros salvos →</a>
+            </div>
+
+            <!-- Texto para o CLIENTE -->
+            <div data-so-cliente hidden>
+                <p>Seu cadastro está ativo (<span data-email-logado></span>).<br>
+                   Nossos barbeiros vão entrar em contato pelo telefone informado para marcar seu horário.</p>
+            </div>
+        </div>
+    </main>
+    <div class="poste"></div>
+</div>
+
+<script src="/js/sessao.js"></script>
+<script>
+    ligarBotaoSair();
+    exigirLogin();
+</script>
+</body>
+</html>
